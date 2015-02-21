@@ -7,18 +7,19 @@
 
 ### Configure Webpack
 
+_webpack.config.js_
 ```javascript
 module.exports = {
-	entry: './src/frankenstein.js',
-	output: {
-		filename: 'frankenstein.js'
-	}
+  entry: './src/frankenstein.js',
+  output: {
+    filename: 'frankenstein.js'
+  }
 };
 ```
 
 ### Make A Source File
 
-`vim src/frankenstein.js`
+_src/frankenstein.js_
 ```javascript
 console.log('It\'s Alive');
 ```
@@ -37,6 +38,7 @@ console.log('It\'s Alive');
 
 ### Configure Webpack
 
+_webpack.config.js_
 ```javascript
 module.exports = {
 	entry: './src/frankenstein.js',
@@ -53,7 +55,7 @@ module.exports = {
 
 ### Make a Module
 
-*src/monsters/Frankenstein.js*
+_src/monsters/Frankenstein.js_
 ```javascript
 class Frankenstein {
 	constructor() {
@@ -66,16 +68,12 @@ export default Frankenstein;
 
 ### Import The Module
 
-*src/frankenstein.js*
+_src/frankenstein.js_
 ```javascript
 import Frankenstein from ‘./monsters/Frankenstein’;
 
 new Frankenstein();
 ```
-
-### Restart Webpack
-
-`webpack-dev-server`
 
 ### View in [Browser](http://localhost:8080/frankenstein)
 
@@ -83,14 +81,15 @@ new Frankenstein();
 
 ### Install Angular DI
 
-`npm install di@2.0.0-pre-14 —save`
+`npm install di@2.0.0-pre-14 --save`
 
 ### Install Imports Loader
 
-`npm install imports-loader —save-dev`
+`npm install imports-loader --save-dev`
 
 ### Configure Webpack
 
+_webpack.config.js_
 ```javascript
 module.exports = {
 	entry: './src/frankenstein.js',
@@ -108,7 +107,7 @@ module.exports = {
 
 ### Instantiate an Injector
 
-*src/frankenstein.js*
+_src/frankenstein.js_
 
 ```javascript
 import { Injector } from 'di';
@@ -118,8 +117,4 @@ let injector = new Injector([]);
 injector.get(Frankenstein);
 ```
 
-4. Restart Webpack
-
-`webpack-dev-server`
-
-5. View in [Browser](http://localhost:8080/frankenstein)
+### View in [Browser](http://localhost:8080/frankenstein)
