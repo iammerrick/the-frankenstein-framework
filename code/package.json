@@ -10,9 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "di": "^2.0.0-pre-14",
-    "react": "^0.12.2"
+    "director": "^1.2.8",
+    "react": "^0.12.2",
+    "whatwg-fetch": "^0.7.0"
   },
   "devDependencies": {
-    "imports-loader": "^0.6.3"
+    "babel-core": "^4.4.3",
+    "babel-loader": "^4.0.0",
+    "imports-loader": "^0.6.3",
+    "webpack": "^1.5.3"
   }
 }

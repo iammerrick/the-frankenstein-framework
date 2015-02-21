@@ -1,9 +1,10 @@
 import { Injector } from 'di';
 import React from 'react';
-import FrankensteinComponent from './monsters/FrankensteinComponent';
+import 'whatwg-fetch';
+import Router from './Router';
 
 let injector = new Injector([]);
-let Frankenstein = injector.get(FrankensteinComponent);
+let router  = injector.get(Router);
 
-React.render(<Frankenstein />, document.body);
+router.init();
 
