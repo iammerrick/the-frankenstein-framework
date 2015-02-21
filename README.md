@@ -118,3 +118,55 @@ injector.get(Frankenstein);
 ```
 
 ### View in [Browser](http://localhost:8080/frankenstein)
+
+# React
+
+### Install React
+
+`npm install react --save`
+
+### Add A Name To Our Frankenstein Model 
+
+_src/monsters/Frankenstein.js_
+```javascript
+class Frankenstein {
+  constructor() {
+    this.name = 'Frankenstein';
+  }
+}
+
+export default Frankenstein;
+```
+
+### Create a FrankensteinComponent Factory
+
+_src/monsters/FrankensteinComponent.js_
+```javascript
+import React from 'react';
+import { annotate, Inject }  from 'di';
+import Frankenstein from './Frankenstein';
+
+annotate(FrankensteinComponent, new Inject(Frankenstein));
+function FrankensteinComponent(monster) {
+  return React.createClass({
+    render() {
+      return <h1>I am {monster.name}!</h1>;
+    }
+  });
+}
+
+export default FrankensteinComponent;
+```
+
+### Render A Frankenstein Component
+_src/frankenstein.js_
+```javascript
+import { Injector } from 'di';
+import React from 'react';
+import FrankensteinComponent from './monsters/FrankensteinComponent';
+
+let injector = new Injector([]);
+let Frankenstein = injector.get(FrankensteinComponent);
+
+React.render(<Frankenstein />, document.body);
+```

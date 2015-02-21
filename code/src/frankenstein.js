@@ -1,5 +1,9 @@
 import { Injector } from 'di';
-import Frankenstein from './monsters/Frankenstein';
+import React from 'react';
+import FrankensteinComponent from './monsters/FrankensteinComponent';
 
 let injector = new Injector([]);
-injector.get(Frankenstein);
+let Frankenstein = injector.get(FrankensteinComponent);
+
+React.render(<Frankenstein />, document.body);
+

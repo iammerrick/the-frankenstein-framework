@@ -1,6 +1,6 @@
 class Frankenstein {
   constructor() {
-    console.log(`It's Alive!`);
+    this.name = 'Frankenstein';
   }
 }
 

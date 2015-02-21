@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "di": "^2.0.0-pre-14"
+    "di": "^2.0.0-pre-14",
+    "react": "^0.12.2"
   },
   "devDependencies": {
     "imports-loader": "^0.6.3"
