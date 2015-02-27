@@ -1,3 +1,6 @@
+# The Frankenstein Framework
+![The Frankenstein Framework](http://cl.ly/image/322f0t2l3w05/Frakenstein.png)
+
 # Webpack Example
 
 ### Install Webpack
